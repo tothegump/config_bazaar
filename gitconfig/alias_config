@@ -1,0 +1,13 @@
+[alias]
+    b = branch
+    ci = commit
+    cob = checkout -b
+    d = diff
+    l = log
+    st = status
+    g --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches
+	ri = rebase --interactive
+    ra = rebase --abort
+    rc = rebase --continue
+
