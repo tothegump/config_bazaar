@@ -1,3 +1,6 @@
+[user]
+name = tothegump
+email = tothegump@gmail.com
 [alias]
     b = branch
     ci = commit
