@@ -1,11 +1,14 @@
 [user]
 name = tothegump
 email = tothegump@gmail.com
+
 [alias]
     b = branch
     ci = commit
+    cia = commit --amend
     cob = checkout -b
     d = diff
+    g = grep -in
     l = log
     st = status
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -31,6 +34,7 @@ email = tothegump@gmail.com
 	psf = push -f
 	psu = push -u
 	pso = push origin
+	psz = push zjmgitlab
 	psao = push --all origin
 	psfo = push -f origin
 	psuo = push -u origin
