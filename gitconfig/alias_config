@@ -2,6 +2,11 @@
 name = tothegump
 email = tothegump@gmail.com
 
+[push]
+    default = simple
+[core]
+    editor = vim
+
 [alias]
     b = branch
     ci = commit
