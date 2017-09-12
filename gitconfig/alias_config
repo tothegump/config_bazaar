@@ -6,6 +6,7 @@ email = tothegump@gmail.com
     b = branch
     ci = commit
     cia = commit --amend
+    co = checkout
     cob = checkout -b
     d = diff
     g = grep -in
@@ -53,5 +54,7 @@ email = tothegump@gmail.com
 	sp = stash pop
 	ss = stash save
 	sw = stash show
+    ############
+    rst = reset
 
 
