@@ -6,11 +6,13 @@ email = tothegump@gmail.com
     default = simple
 [core]
     editor = vim
+    excludesfile = ~/.gitignore_global
 
 [alias]
     b = branch
     ci = commit
     cia = commit --amend
+    cempty = commit --allow-empty -m
     co = checkout
     cob = checkout -b
     d = diff
