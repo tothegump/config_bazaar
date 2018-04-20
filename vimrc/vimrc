@@ -67,7 +67,6 @@ set showcmd " Display an incomplete command in the lower right corner of the Vim
 set shortmess=atI " Shortens messages
 
 set nolist " Display unprintable characters f12 - switches
-set listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:« " Unprintable chars mapping
 
 set foldenable " Turn on folding
 set foldmethod=marker " Fold on the marker
