@@ -1,0 +1,51 @@
+set background=dark
+
+set nu
+
+" General "{{{
+set nocompatible  " disable vi compatibility.
+set history=256  " Number of things to remember in history.
+set pastetoggle=<F10> "  toggle between paste and normal: for 'safer' pasting from keyboard
+set autowrite  " Writes on make/shell commands
+set autoread
+set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
+" Buffers
+set hidden " The current buffer can be put to the background without writing to disk
+" Match and search
+set hlsearch    " highlight search
+set ignorecase  " Do case in sensitive matching with
+set smartcase		" be sensitive when there's a capital letter
+set incsearch   "
+" "}}}
+
+set backspace=indent,eol,start	" more powerful backspacing
+
+set tabstop=4    " Set the default tabstop
+set softtabstop=4
+set shiftwidth=4 " Set the default shift width for indents
+set expandtab   " Make tabs into spaces (set by tabstop)
+set smarttab " Smarter tab levels
+
+set autoindent
+set cindent
+
+" Window Splits
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'universal-ctags/ctags'
+" Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+
