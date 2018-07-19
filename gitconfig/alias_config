@@ -9,6 +9,7 @@ email = tothegump@gmail.com
     excludesfile = ~/.gitignore_global
 
 [alias]
+    ac = add .
     b = branch
     ci = commit
     cia = commit --amend
@@ -40,7 +41,7 @@ email = tothegump@gmail.com
 	psf = push -f
 	psu = push -u
 	pso = push origin
-	psz = push zjmgitlab
+	psu = push upstream
 	psao = push --all origin
 	psfo = push -f origin
 	psuo = push -u origin
@@ -61,5 +62,6 @@ email = tothegump@gmail.com
 	sw = stash show
     ############
     rst = reset
-
+    find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+    show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
 
