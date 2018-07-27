@@ -52,6 +52,10 @@ aria () {
     `echo $@ | sed -e "s/akcom/aria2.kezaihui.com:4567/g"`
 }
 
+arcom () {
+    `echo $@ | sed -e "s/akcom/aria2.kezaihui.com:4567\/zaihui\/compose/g"`
+}
+
 zecr () {
     `echo $@ | sed -e "s/zecr/694593263717.dkr.ecr.cn-north-1.amazonaws.com.cn/g"`
 }
