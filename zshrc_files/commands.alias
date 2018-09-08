@@ -1,0 +1,26 @@
+################################################################################
+# alias
+################################################################################
+alias gitp="git pull --rebase"
+alias ymym=git diff --name-status CURRENT_PROD | grep '^A.*migra.*'
+alias hpm="npm --registry=https://tnt.kezaihui.com"
+alias pm="python manage.py"
+alias gbb="git branch --set-upstream-to=upstream/freeze"
+alias gbd="git rebase upstream/dev"
+alias gsh="ssh -t kegate ssh -t"
+
+################################################################################
+# plugins
+################################################################################
+plugins=(git autojump kubectl)
+
+################################################################################
+# User configuration
+################################################################################
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/Users/tothegump/.myapps/apache-maven-3.5.3/bin"
+export JAVAHOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home"
+
+export GOPATH=~/gopath
+export PATH=$GOPATH/bin:$PATH

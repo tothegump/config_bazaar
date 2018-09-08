@@ -13,6 +13,7 @@ email = tothegump@gmail.com
     b = branch
     ci = commit
     cia = commit --amend
+    cian = commit --amend --no-edit
     cempty = commit --allow-empty -m
     co = checkout
     cob = checkout -b
