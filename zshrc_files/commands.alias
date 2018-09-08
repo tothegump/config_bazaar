@@ -8,6 +8,8 @@ alias pm="python manage.py"
 alias gbb="git branch --set-upstream-to=upstream/freeze"
 alias gbd="git rebase upstream/dev"
 alias gsh="ssh -t kegate ssh -t"
+alias proxy='export all_proxy=socks5://127.0.0.1:1080'
+alias unproxy='unset all_proxy'
 
 ################################################################################
 # plugins
@@ -24,3 +26,4 @@ export JAVAHOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
 export GOPATH=~/gopath
 export PATH=$GOPATH/bin:$PATH
+
