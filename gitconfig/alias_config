@@ -11,6 +11,7 @@ email = tothegump@gmail.com
 [alias]
     ac = add .
     b = branch
+    wip = commit --all --message "WIP" --allow-empty
     ci = commit
     cia = commit --amend
     cian = commit --amend --no-edit
