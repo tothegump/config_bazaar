@@ -8,6 +8,7 @@ alias pm="python manage.py"
 alias gbb="git branch --set-upstream-to=upstream/freeze"
 alias gbd="git rebase upstream/dev"
 alias gsh="ssh -t kegate ssh -t"
+alias gcob="git checkout -b"
 alias proxy='export all_proxy=socks5://127.0.0.1:1086'
 alias unproxy='unset all_proxy'
 

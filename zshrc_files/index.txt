@@ -1,2 +1,2 @@
 ln -s source/path .zshrc_files/*
-[ -d ~/.zshrc_files ] && . ~/.zshrc_files/*
+[ -d ~/.zshrc_files ] && for f in ~/.zshrc_files/*.alias; do . $f; done
