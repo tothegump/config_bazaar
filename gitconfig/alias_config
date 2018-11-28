@@ -41,11 +41,11 @@ email = tothegump@gmail.com
 	#############
 	ps = push
 	psf = push -f
-	psu = push -u
 	pso = push origin
 	psu = push upstream
 	psao = push --all origin
 	psfo = push -f origin
+	psuu = push -u upstream
 	psuo = push -u origin
 	psom = push origin master
 	#############
