@@ -55,6 +55,11 @@ email = tothegump@gmail.com
 	rbi = rebase --interactive
 	rbs = rebase --skip
 	#############
+    r = remote
+    ra = remote add
+    rr = remote remove
+    rv = remote -v
+	#############
 	sa = stash apply
 	sc = stash clear
 	sd = stash drop
