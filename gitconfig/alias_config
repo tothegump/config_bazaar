@@ -59,6 +59,8 @@ email = tothegump@gmail.com
     ra = remote add
     rr = remote remove
     rv = remote -v
+    rrou = remote rename origin upstream
+    rruo = remote rename upstream origin
 	#############
 	sa = stash apply
 	sc = stash clear
