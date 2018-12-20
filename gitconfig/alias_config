@@ -76,4 +76,6 @@ email = tothegump@gmail.com
     ############
     nz = config user.name zhangjinming
     ez = config user.email zhangjinming@kezaihui.com
+    ############
+    lm8f = log --merges --since=8.days --grep="into 'freeze'"
 
