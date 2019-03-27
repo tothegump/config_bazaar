@@ -20,11 +20,12 @@ plugins=(git autojump kubectl)
 ################################################################################
 # User configuration
 ################################################################################
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:/Users/tothegump/.myapps/apache-maven-3.5.3/bin"
-export JAVAHOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home"
-
-export GOPATH=~/gopath
-export PATH=$GOPATH/bin:$PATH
+# export ENV_BASE_PATH="~/.allenvs"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="$PATH:/usr/local/go/bin"
+# export PATH="$PATH:/Users/tothegump/.myapps/apache-maven-3.5.3/bin"
+# export JAVAHOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home"
+# 
+# export GOPATH=~/gopath
+# export PATH=$GOPATH/bin:$PATH
 

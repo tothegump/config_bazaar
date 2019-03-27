@@ -53,6 +53,7 @@ email = tothegump@gmail.com
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase --interactive
+	rbiud = rebase --interactive upstream/dev
 	rbs = rebase --skip
 	#############
     r = remote
