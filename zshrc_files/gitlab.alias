@@ -1,0 +1,18 @@
+function gpuo() {
+    git psuo `git symbolic-ref --short HEAD`
+}
+
+function gpr() {
+    target=$1
+    if [ "$#" -ge 2 ]; then
+        project=$2
+    else
+        project='server'
+    fi
+    sourch_branch=`git symbolic-ref --short HEAD`
+    echo "target: "${target}
+    echo "project: "${project}
+    echo "sourch_branch: "${sourch_branch}
+
+    echo "https://aria2.kezaihui.com/zhangjinming/${project}/merge_requests/new?merge_request%5Bsource_branch%5D=${sourch_branch}&merge_request%5Btarget_branch%5D=${target}"
+}

@@ -1,0 +1,21 @@
+export PY_ENVS="${ENV_BASE_PATH}/py_envs"
+
+function dpy() {
+    ls -d -1 "$PY_ENVS"/**
+}
+
+function lpy() {
+    ls $PY_ENVS
+}
+
+function vepy() {
+    source `git rev-parse --show-toplevel`/venv/bin/activate
+}
+
+function apy() {
+    source ${PY_ENVS}/$1/bin/activate
+}
+
+function newp3() {
+    $1 -m venv ${PY_ENVS}/$2
+}

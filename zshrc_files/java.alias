@@ -1,0 +1,22 @@
+# add maven
+export MAVEN_HOME="/Users/tothegump/.allenvs/java_envs/apache-maven-3.5.4"
+export PATH="${MAVEN_HOME}/bin:$PATH"
+
+# java
+export JAVAHOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home"
+export PATH="$JAVAHOME/bin:$PATH"
+
+java8home="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home"
+java11home="/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home"
+
+function java8() {
+    export JAVAHOME=${java8home}
+    export PATH=`echo $PATH |sed "s#${java11home}#${java8home}#"`
+    echo "switch to java8"
+}
+
+function java11() {
+    export JAVAHOME=${java11home}
+    export PATH=`echo $PATH |sed "s#${java8home}#${java11home}#"`
+    echo "switch to java11"
+}
