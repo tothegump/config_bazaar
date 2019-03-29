@@ -11,6 +11,7 @@ alias gsh="ssh -t kegate ssh -t"
 alias gcob="git checkout -b"
 alias proxy='export all_proxy=socks5://127.0.0.1:1086'
 alias unproxy='unset all_proxy'
+alias getip='curl -v ip.gs'
 
 ################################################################################
 # plugins
