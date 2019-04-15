@@ -16,3 +16,14 @@ function gpr() {
 
     echo "https://aria2.kezaihui.com/zhangjinming/${project}/merge_requests/new?merge_request%5Bsource_branch%5D=${sourch_branch}&merge_request%5Btarget_branch%5D=${target}"
 }
+
+function gnb() {
+    name=$1
+    if [ "$#" -ge 2 ]; then
+        source_branch=$2
+    else
+        source_branch=upstream/dev
+    fi
+    git checkout -b ${name} ${source_branch}
+}
+

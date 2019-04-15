@@ -1,5 +1,8 @@
 export PY_ENVS="${ENV_BASE_PATH}/py_envs"
 
+alias pvi='pipenv install'
+alias pvs='pipenv shell'
+
 function dpy() {
     ls -d -1 "$PY_ENVS"/**
 }
@@ -19,3 +22,4 @@ function apy() {
 function newp3() {
     $1 -m venv ${PY_ENVS}/$2
 }
+
