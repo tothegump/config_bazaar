@@ -3,21 +3,25 @@ function gpuo() {
 }
 
 function gpr() {
+    # gpr target [project]
     target=$1
     if [ "$#" -ge 2 ]; then
         project=$2
     else
-        project='server'
+        project='pt-cluster'
     fi
     sourch_branch=`git symbolic-ref --short HEAD`
     echo "target: "${target}
     echo "project: "${project}
     echo "sourch_branch: "${sourch_branch}
 
-    echo "https://aria2.kezaihui.com/zhangjinming/${project}/merge_requests/new?merge_request%5Bsource_branch%5D=${sourch_branch}&merge_request%5Btarget_branch%5D=${target}"
+    echo "https://gitlab.innotechx.com/zhangjinming/${project}/merge_requests/new?merge_request%5Bsource_branch%5D=${sourch_branch}&merge_request%5Btarget_branch%5D=${target}"
 }
 
+alias mypr='echo "https://gitlab.innotechx.com/mt/pt-cluster/merge_requests?scope=all&utf8=%E2%9C%93&state=opened&author_username=zhangjinming"'
+
 function gnb() {
+    # gnb name [source_branch]
     name=$1
     if [ "$#" -ge 2 ]; then
         source_branch=$2
@@ -25,5 +29,15 @@ function gnb() {
         source_branch=upstream/dev
     fi
     git checkout -b ${name} ${source_branch}
+}
+
+# new hotfix branch
+alias gnh="git fu && gnb hotfix upstream/master"
+alias galot="git ac && git cian && git psuo -f"
+
+function gnt() {
+    echo $1
+    echo "git fu && git cob $1 upstream/master"
+    git fu && git cob $1 upstream/master
 }
 

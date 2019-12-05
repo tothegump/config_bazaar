@@ -1,2 +1,3 @@
 set surround
-nmap gb :action Back<CR>
+nmap zz :action Back<CR>
+nmap ff :action Forward<CR>

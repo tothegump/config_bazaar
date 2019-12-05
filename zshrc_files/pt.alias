@@ -1,0 +1,20 @@
+# Golang around
+alias nbmake="make && make gofmt-check && make ptgate-apicheck && make vet"
+
+function rr() {
+    echo "doing $1"
+    ./run.sh pt$1
+}
+
+function mr() {
+    echo "doing $1"
+    make pt$1 && ./run.sh pt$1
+}
+
+function mir() {
+    echo "doing $1"
+    go build -o ./bin/pt$1 -tags 'wechat_debug' -ldflags '-X ptapp.cn/vendor/github.com/ryandeng/goversion.version=$(BUILD_VERSION)' -v ./src/ptapp.cn/pt$1  && ./run.sh pt$1 $2
+}
+
+alias re="./run.sh ptenigma"
+

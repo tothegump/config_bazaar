@@ -1,0 +1,13 @@
+go10home="/usr/local/go/bin"
+go13home="/Users/tothegump/sdk/go1.13.4/bin"
+
+function go13() {
+    export PATH=`echo $PATH |sed "s#${go10home}#${go13home}#"`
+    echo "switch to go13"
+}
+
+function go10() {
+    export PATH=`echo $PATH |sed "s#${go13home}#${go10home}#"`
+    echo "switch to go10"
+}
+

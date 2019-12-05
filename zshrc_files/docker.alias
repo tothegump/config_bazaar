@@ -11,6 +11,9 @@ alias dps="docker ps"
 # Get process included stop container
 alias dpa="docker ps -a"
 
+# docker pull
+alias dpl="docker pull"
+
 # Get images
 alias di="docker images"
 
@@ -28,6 +31,7 @@ alias dex="docker exec -i -t"
 
 # Stop all containers
 dstop() { docker stop $(docker ps -a -q); }
+dsc() { docker stop $1; }
 
 # Remove all containers
 drm() { docker rm $(docker ps -a -q); }
@@ -40,6 +44,7 @@ dri() { docker rmi $(docker images -q); }
 
 # Dockerfile build, e.g., $dbu tcnksm/test 
 dbu() { docker build -t=$1 .; }
+dbuf() { docker build -t=$1 . -f=$2; }
 
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
@@ -58,5 +63,18 @@ arcom () {
 
 zecr () {
     `echo $@ | sed -e "s/zecr/694593263717.dkr.ecr.cn-north-1.amazonaws.com.cn/g"`
+}
+
+################################################################################
+# docker-compose commands
+################################################################################
+DCDIR="/Users/tothegump/stupid/innotech/codebase/compose"
+alias dcdir="cd $DCDIR"
+alias dcp="docker-compose"
+alias dcup="docker-compose up"
+alias myup="docker-compose -f mysql-compose.yml up"
+dcelery () {
+    echo "compose celery $1"
+    cd $DCDIR && dcp -f celery-compose.yml $1
 }
 

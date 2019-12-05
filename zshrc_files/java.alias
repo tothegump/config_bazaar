@@ -20,3 +20,6 @@ function java11() {
     export PATH=`echo $PATH |sed "s#${java8home}#${java11home}#"`
     echo "switch to java11"
 }
+
+alias hmvn="mvn --settings ${MAVEN_HOME}/conf/zaihui_settings.xml"
+
