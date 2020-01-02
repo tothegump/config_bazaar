@@ -36,6 +36,7 @@ email = tothegump@gmail.com
 	f = fetch
 	fo = fetch origin
 	fu = fetch upstream
+	fm = fetch upstream master
 	#############
 	m = merge
 	ma = merge --abort

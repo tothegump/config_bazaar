@@ -33,11 +33,15 @@ function gnb() {
 
 # new hotfix branch
 alias gnh="git fu && gnb hotfix upstream/master"
+alias gndev="git fu dev && git fu master && gnb del-m upstream/dev && git merge upstream/master"
 alias galot="git ac && git cian && git psuo -f"
+alias bm="git fm && git rbi upstream/master"
+alias pf="git psuo -f"
+alias gdevm="glog --author="卡洛" upstream/dev"
 
 function gnt() {
     echo $1
-    echo "git fu && git cob $1 upstream/master"
-    git fu && git cob $1 upstream/master
+    echo "git fu master && git cob $1 upstream/master"
+    git fu master && git cob $1 upstream/master
 }
 

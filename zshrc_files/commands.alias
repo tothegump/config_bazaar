@@ -33,3 +33,13 @@ plugins=(git autojump kubectl)
 # export GOPATH=~/gopath
 # export PATH=$GOPATH/bin:$PATH
 
+#alias kafka="cd ~/stupid/dockersome && sed \"s/192.168.50.243/$(echo $myip | awk '{print $2}')/g\" ./kafka.tmp"
+alias mylan="echo $(ifconfig | grep 'inet.*netmask.*broadcast' |head -n1|awk '{print $2}')"
+alias kafka='cd ~/stupid/dockersome && sed "s/192.168.50.243/$(mylan)/g" ./kafka.tmp'
+alias kcmd='cd ~/stupid/dockersome && sed "s/192.168.50.243/$(mylan)/g" ./kafka.commands.sh|less'
+
+################################################################################
+# gump scripts
+################################################################################
+alias gpjps="ssh_jumpserver.sh"  # 登录 jumpserver, args: 59, db, dev, test
+

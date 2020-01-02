@@ -6,6 +6,15 @@ function rr() {
     ./run.sh pt$1
 }
 
+function dmr() {
+    echo "doing $1"
+    export USE_TAGLB=true
+    export CONSUL_REGISTRATION_TAG=carlos
+    export SERVICE_GROUP=dev
+    export ENIGMA_URL=http://192.168.18.59:30090/keys
+    make pt$1 && ./run.sh pt$1
+}
+
 function mr() {
     echo "doing $1"
     make pt$1 && ./run.sh pt$1
@@ -17,4 +26,6 @@ function mir() {
 }
 
 alias re="./run.sh ptenigma"
+alias mgb="make ptgoodsbiz"
+alias ce='env |grep "USE_TAGLB\|SERVICE_GROUP\|CONSUL_REGISTRATION_TAG\|ENIGMA_URL"'
 

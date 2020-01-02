@@ -1,0 +1,2 @@
+alias esps="ps | grep elasticsearch |grep path.data |cut -d ' ' -f 1"
+alias eskill="ps | grep elasticsearch |grep path.data |cut -d ' ' -f 1 |xargs kill -9"
